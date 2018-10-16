@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		const fris = 2.00;
+		const bier = 4.00;
+		const wijn = 5.00;
+	</script>
+</body>
+</html>
