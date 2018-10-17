@@ -18,17 +18,35 @@ const SNACKPRIJS = 0.20;
 function go() {
 	var x = prompt("Welke bestelling wilt u toevoegen?", "Fris / bier / wijn / snack").toLowerCase();
 	if (x == "fris"){
-	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-} 	if (x == "bier"){
-	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-}	if (x == "wijn"){
-	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-}	if (x == "snack"){
-	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-} else {
+		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
+		fris += parseInt(x);
+} 	else if (x == "bier"){
+		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
+		bier += parseInt(x);
+}	else if (x == "wijn"){
+		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
+		wijn += parseInt(x);
+}	else if (x == "snack"){
+		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
+		snack += parseInt(x);
+} 	else {
 	window.confirm("U heeft een ongeldige invoer gedaan. Uw bestelling kan niet worden toegevoegd.")
 	}
-if (window.confirm("Wilt u nog wat bestellen?")){
-	go();
-}	
+	if (window.confirm("Wilt u nog wat bestellen?")){
+		go();
+	} else {
+		rekening();
+	}
+}
+
+function rekening() {
+	var frisprijs = fris * FRISPRIJS;
+	var bierprijs = bier * BIERPRIJS;
+	var wijnprijs = wijn * WIJNPRIJS;
+	var snackprijs = snack * SNACKPRIJS;
+	var totaalprijs = frisprijs + bierprijs + wijnprijs + snackprijs;
+	document.getElementById("list").innerHTML = "Fris " + frisprijs;
+	document.getElementById("list").innerHTML = "Bier " + bierprijs;
+	document.getElementById("list").innerHTML = "Wijn " + wijnprijs;
+	document.getElementById("list").innerHTML = "Snack " + snackprijs;
 }
