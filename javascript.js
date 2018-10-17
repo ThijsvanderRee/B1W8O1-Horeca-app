@@ -18,11 +18,17 @@ const SNACKPRIJS = 0.20;
 function go() {
 	var x = prompt("Welke bestelling wilt u toevoegen?", "Fris / bier / wijn / snack").toLowerCase();
 	if (x == "fris"){
-	var z = prompt("Hoeveel " + x + " wilt u bestellen.")
+	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
+} 	if (x == "bier"){
+	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
+}	if (x == "wijn"){
+	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
+}	if (x == "snack"){
+	var z = prompt("Hoeveel " + x + " wilt u bestellen?")
 } else {
-	var z = prompt("Hoeveel " + x + " wilt u bestellen.")
+	window.confirm("U heeft een ongeldige invoer gedaan. Uw bestelling kan niet worden toegevoegd.")
 	}
-	if (window.confirm("Wilt u nog wat bestellen?")){
-		go();
-	}
+if (window.confirm("Wilt u nog wat bestellen?")){
+	go();
+}	
 }
