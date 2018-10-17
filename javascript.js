@@ -15,8 +15,14 @@ const BIERPRIJS = 4.00;
 const WIJNPRIJS = 5.00;
 const SNACKPRIJS = 0.20;
 
-function go(bestelling) {
-	var bestelling = prompt("Wat voor bestelling wilt u maken?", "Fris / bier / wijn / snack").toLocalLowerCase;
-} if (bestelling == "fris") {
-	
+function go() {
+	var x = prompt("Welke bestelling wilt u toevoegen?", "Fris / bier / wijn / snack").toLowerCase();
+	if (x == "fris"){
+	var z = prompt("Hoeveel " + x + " wilt u bestellen.")
+} else {
+	var z = prompt("Hoeveel " + x + " wilt u bestellen.")
+	}
+	if (window.confirm("Wilt u nog wat bestellen?")){
+		go();
+	}
 }
