@@ -45,10 +45,18 @@ function rekening() {
 	var wijnprijs = wijn * WIJNPRIJS;
 	var snackprijs = snack * SNACKPRIJS;
 	var totaalprijs = frisprijs + bierprijs + wijnprijs + snackprijs;
-	document.write("De " + fris  + " fris kost " + frisprijs + " euro." + "<br>");
-	document.write("De " + bier + " bier kost " + bierprijs + " euro." + "<br>");
-	document.write("De " + wijn + " wijn kost " + wijnprijs + " euro." + "<br>");
-	document.write("De " + snack + " snack kost " + snackprijs + " euro." + "<br>");
+	if (fris != 0) {
+		document.write("De " + fris  + " fris kost " + frisprijs + " euro." + "<br>");
+	}
+	if (bier != 0) {
+		document.write("De " + bier + " bier kost " + bierprijs + " euro." + "<br>");
+	}
+	if (wijn != 0) {
+		document.write("De " + wijn + " wijn kost " + wijnprijs + " euro." + "<br>");
+	}
+	if (snack != 0) {
+		document.write("De " + snack + " snack kost " + snackprijs + " euro." + "<br>");
+	}
 	document.write('<hr>');
 	document.write("De totaalprijs is " + totaalprijs + " euro.")
 }
