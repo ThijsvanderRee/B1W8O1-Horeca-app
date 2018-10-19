@@ -16,19 +16,19 @@ const WIJNPRIJS = 5.00;
 const SNACKPRIJS = 0.20;
 
 function go() {
-	var x = prompt("Welke bestelling wilt u toevoegen?", "Fris / bier / wijn / snack").toLowerCase();
-	if (x == "fris"){
-		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-		fris += parseInt(x);
-} 	else if (x == "bier"){
-		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-		bier += parseInt(x);
-}	else if (x == "wijn"){
-		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-		wijn += parseInt(x);
-}	else if (x == "snack"){
-		var z = prompt("Hoeveel " + x + " wilt u bestellen?")
-		snack += parseInt(x);
+	var bestelling = prompt("Welke bestelling wilt u toevoegen?", "Fris / bier / wijn / snack").toLowerCase();
+	if (bestelling == "fris"){
+		var aantal = prompt("Hoeveel " + bestelling + " wilt u bestellen?")
+		fris += parseInt(aantal);
+} 	else if (bestelling == "bier"){
+		var aantal = prompt("Hoeveel " + bestelling + " wilt u bestellen?")
+		bier += parseInt(aantal);
+}	else if (bestelling == "wijn"){
+		var aantal = prompt("Hoeveel " + bestelling + " wilt u bestellen?")
+		wijn += parseInt(aantal);
+}	else if (bestelling == "snack"){
+		var aantal = prompt("Hoeveel " + bestelling + " wilt u bestellen?")
+		snack += parseInt(aantal);
 } 	else {
 	window.confirm("U heeft een ongeldige invoer gedaan. Uw bestelling kan niet worden toegevoegd.")
 	}
@@ -45,8 +45,10 @@ function rekening() {
 	var wijnprijs = wijn * WIJNPRIJS;
 	var snackprijs = snack * SNACKPRIJS;
 	var totaalprijs = frisprijs + bierprijs + wijnprijs + snackprijs;
-	document.getElementById("list").innerHTML = "Fris " + frisprijs;
-	document.getElementById("list").innerHTML = "Bier " + bierprijs;
-	document.getElementById("list").innerHTML = "Wijn " + wijnprijs;
-	document.getElementById("list").innerHTML = "Snack " + snackprijs;
+	document.write("De " + fris  + " fris kost " + frisprijs + " euro." + "<br>");
+	document.write("De " + bier + " bier kost " + bierprijs + " euro." + "<br>");
+	document.write("De " + wijn + " wijn kost " + wijnprijs + " euro." + "<br>");
+	document.write("De " + snack + " snack kost " + snackprijs + " euro." + "<br>");
+	document.write('<hr>');
+	document.write("De totaalprijs is " + totaalprijs + " euro.")
 }
